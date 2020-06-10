@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+   Details
+{% endblock %}
+
+{% block body %}
+    <li>ISBN : {{ list["isbn"] }}</li>
+    <li>Title : {{ info['title'] }}</li>
+    <li>Publication year : {{ info['publication_year'] }}</li>
+    <li>Author : {{ info['author'] }}</li>
+    <li>Ratings count : {{ list["ratings_count"] }}</li>
+    <li>Reviews count : {{ list["reviews_count"] }}</li>
+    <li>Average rating : {{ list["average_rating"] }}</li>
+    <br>
+    <p></p>
+    <h2>REVIEWS : {{ reviews|length }}</h2>
+    <br>
+    {% if reviews|length==0 %}
+        <div>No reviews available.</div>
+    {% else %}
+        {% for r in reviews %}
+            <div>
+                <p>User : {{r['username']}} &emsp; &emsp;   Rating : {{r['rating']}}/5 </p>
+                   Review :  <p>{{r['review']}} </p>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <br>
+    Submit your review :
+    <form action = "{{ url_for('book', isbn = list['isbn']) }}" method="POST">
+        <select id="rating" name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <input type="text" placeholder="Review" name="review">
+        <button>Submit</button>
+    </form>
+    <br>
+    <div><a href="{{ url_for('login') }}">Dashboard</a></div>
+    <div><a href="{{ url_for('logout') }}">Logout</a></div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+   Error
+{% endblock %}
+
+{% block body %}
+    {{ message }}
+    <p></p>
+    {% if choice==1 %}
+       <div><a href="{{url_for('register')}}">Register</a></div>
+    {% elif choice==2 %}
+       <div><a href="{{url_for('login')}}">Login</a></div>
+    {% else %}
+       <div><a href="{{url_for('register')}}">Register</a></div>
+       <div><a href="{{url_for('login')}}">Login</a></div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
+        <style>
+            body{
+                margin-top:50px;
+                background-color:#09244f;
+                color:white;
+            }
+            a{
+                text-decoration:none;
+                color:#0d8294;
+            }
+            .container{
+                text-align:center;
+                width:300px;
+            }
+            input,button{
+                margin:4px;
+                width:180px;
+            }
+            
+        </style>
+	</head>
+	<body>
+        <div class="container">
+            <h1>{% block heading %}{% endblock %}</h1>
+            <br>
+            {% block body %}
+            {% endblock %}
+            <p></p>
+        </div>
+	</body>
+</html>

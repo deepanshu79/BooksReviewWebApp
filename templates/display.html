@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Search results
+{% endblock %}
+
+{% block body %}
+    {% if users|length == 0 %}
+      <h3>No match found.</h3>
+    {% else %}
+       <ol>
+      {% for i in users %}
+        <li><a href="{{url_for('book', isbn = i['isbn_no'])}}">{{ i['title'] }}</a></li>
+      {% endfor %}
+      </ol>
+    {% endif %}
+    <br>
+    <div><a href="{{ url_for('login') }}">Dashboard</a></div>
+    <a href="{{ url_for('logout') }}">Logout</a>
+{% endblock %}
