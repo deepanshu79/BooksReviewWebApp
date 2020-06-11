@@ -9,13 +9,13 @@ Database URL = postgres://jifsoieydfzqwo:d75adba98c2741a006e5ef607225079ce462717
 
 Features available on website :
 
-Register - First of all user need to register to website with a username , password and email address . Registering with an username already taken or with incomplete details will result in a error message .
+Register - First of all user need to register to website with a username , password and email address . Registering with an username already taken or with incomplete details will result in a error message.
 
-Login - Registered user will then be able to login in to the website . An login attempt with valid username and password will take the user to profile dashboard otherwise the login attempt will result in a error message .
+Login - Registered user will then be able to login in to the website . An login attempt with valid username and password will take the user to profile dashboard otherwise the login attempt will result in a error message.
 
-Search - Logged in user will then be able to search for books by their ISBN no. , title , author name . The result of this search will be list of books having matching details . If there was no such book in database then an message will be dislayed for same.
+Search - Logged in user will then be able to search for books by their ISBN no. , title , author name . The result of this search will be list of books having matching details . If there was no such book in database then a message will be dislayed for same.
 
-Review statistics - When the user clicks on one of the search result then it will then be taken to page having review statistics about that books fetched using goodreads API . This page will also show the available reviews about that book.
+Review statistics - Clicking on one of the search results will take the user to a page having review statistics about that books fetched using goodreads API. This page will also show the available reviews about that book(if any).
 
 Submitting review - On the book details page , user will also be able to submit his/her own review consisting of rating and text review . After review submission the page will update/refresh itself to show the user review . In case of second review submission by user on the same book , an error message will be displayed.
 
@@ -29,6 +29,6 @@ application.py - Implements the whole website using routes.
 
 import.py - Imports the books details from the books csv file into the database.
 
-templates - Include all the htmls pages.
+templates - Include all the html pages.
 
 requirements.txt - Mentions requirements for running website on browser.
