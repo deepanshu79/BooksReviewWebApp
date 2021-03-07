@@ -1,9 +1,6 @@
-# Project 1 
+# SeeBooks
 
-Web Programming with Python and JavaScript
-
-
-This project implements a books review web app using flask (python framework) , postgreSQL , SQLAlchemy , Jinja2 , goodreads API and python.
+This project implements a books reviewing web application using flask (python framework) , postgreSQL , SQLAlchemy , Jinja2 , goodreads API and python.
 
 Database URL = `postgres://jifsoieydfzqwo:d75adba98c2741a006e5ef607225079ce462717d761b2a58fe469d4ec64dc790@ec2-52-7-39-178.compute-1.amazonaws.com:5432/d2d2rpvo1o7du6`
 
