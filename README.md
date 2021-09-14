@@ -28,4 +28,4 @@ import.py - Imports the books details from the books.csv file into the database.
 
 templates - Include all the html pages.
 
-requirements.txt - Mentions requirements for running website on browser.
+
